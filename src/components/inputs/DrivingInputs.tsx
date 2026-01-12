@@ -75,8 +75,9 @@ export function DrivingInputs() {
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <label className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
+                            <label className="text-xs font-semibold text-slate-500 uppercase tracking-wide flex items-center">
                                 DC Charging Loss (%)
+                                <InfoTooltip content="Energy lost as heat during fast charging. Typically 90-95% efficient (5-10% loss)." />
                             </label>
                             <div className="relative">
                                 <input

@@ -63,7 +63,7 @@ export function ComparisonTable() {
                     <table className="w-full text-left border-collapse">
                         <thead>
                             <tr className="bg-slate-50 text-xs font-semibold text-slate-500 uppercase whitespace-nowrap">
-                                <th className="py-4 px-6 border-b border-slate-200 sticky left-0 bg-slate-50 z-10 w-1/3">Scenario</th>
+                                <th className="py-4 px-6 border-b border-slate-200 w-1/3 min-w-[200px]">Scenario</th>
                                 <th className="py-4 px-4 border-b border-slate-200 text-right text-blue-600">Public Cost</th>
                                 <th className="py-4 px-4 border-b border-slate-200 text-right text-emerald-600">Home Cost</th>
                                 <th className="py-4 px-4 border-b border-slate-200 text-right">Total / Yr</th>
@@ -78,7 +78,7 @@ export function ComparisonTable() {
                                         onClick={() => toggleExpand(s.scenarioName)}
                                         className={`cursor-pointer transition-colors hover:bg-slate-50 ${bestOverall?.scenarioName === s.scenarioName ? 'bg-indigo-50/10' : ''}`}
                                     >
-                                        <td className="py-4 px-6 sticky left-0 bg-inherit z-10">
+                                        <td className="py-4 px-6">
                                             <div className="flex items-center gap-2">
                                                 {/* Highlight if this scenario is one of the best (lowest cost) */}
                                                 {Math.abs(s.costs.total - (bestOverall?.costs.total ?? 0)) < 0.01 && (

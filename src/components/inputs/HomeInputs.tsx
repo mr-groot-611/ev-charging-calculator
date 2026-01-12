@@ -36,8 +36,9 @@ export function HomeInputs() {
                 {/* Fixed Fee */}
                 <div className="space-y-2">
                     <div className="flex items-center gap-1">
-                        <label className="text-sm font-medium text-slate-600 block">
+                        <label className="text-sm font-medium text-slate-600 flex items-center">
                             Fixed Monthly Fee (Optional)
+                            <InfoTooltip content="E.g. Condo charging access fee or membership dues." />
                         </label>
                     </div>
 
