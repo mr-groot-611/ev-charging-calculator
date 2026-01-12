@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://myevmath.com/sitemap.xml
