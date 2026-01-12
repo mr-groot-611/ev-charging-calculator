@@ -13,6 +13,7 @@ import { Settings } from 'lucide-react';
 import { Modal } from './components/ui/Modal';
 import { PlanSelector } from './components/inputs/PlanSelector';
 import { StickyFooter } from './components/layout/StickyFooter';
+import { SEOContent } from './components/layout/SEOContent';
 
 function CalculatorContent() {
   const [showPlanModal, setShowPlanModal] = useState(false);
@@ -101,6 +102,7 @@ function CalculatorContent() {
               <RecommendationPanel />
               <SummaryCards />
               <ComparisonTable />
+              <SEOContent />
             </div>
           </div>
 
