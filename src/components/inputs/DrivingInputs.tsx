@@ -1,4 +1,5 @@
 import { useCalculator } from '../../store/CalculatorContext';
+import { InfoTooltip } from '../ui/InfoTooltip';
 
 export function DrivingInputs() {
     const { driving, setDriving } = useCalculator();
@@ -29,8 +30,9 @@ export function DrivingInputs() {
 
                 {/* Efficiency */}
                 <div className="space-y-2">
-                    <label className="text-sm font-medium text-slate-600 block">
+                    <label className="text-sm font-medium text-slate-600 flex items-center">
                         Efficiency (kWh/100km)
+                        <InfoTooltip content="Energy consumed to travel 100km. Lower is better. Check your car dashboard (e.g., BYD Atto 3 ~15 kWh/100km)." />
                     </label>
                     <input
                         type="number"
@@ -52,6 +54,7 @@ export function DrivingInputs() {
                             onChange={(e) => update('includeLosses', e.target.checked)}
                         />
                         <span className="text-sm font-medium text-slate-700">Include Charging Efficiency Losses</span>
+                        <InfoTooltip content="Energy lost as heat during charging (Charger → Battery). AC is typically 80-90% efficient, DC is 90-95%." />
                     </label>
                 </div>
 

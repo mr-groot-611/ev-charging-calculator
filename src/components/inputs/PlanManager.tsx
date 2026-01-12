@@ -3,6 +3,7 @@ import { useCalculator } from '../../store/CalculatorContext';
 import type { SubscriptionPlan } from '../../types';
 import { DEFAULT_PLANS } from '../../defaults';
 import { Plus, Trash2, RotateCcw, ChevronDown } from 'lucide-react';
+import { InfoTooltip } from '../ui/InfoTooltip';
 
 export function PlanManager() {
     const { plans, setPlans, cpos } = useCalculator();
@@ -150,7 +151,10 @@ export function PlanManager() {
                             </div>
 
                             <div className="md:col-span-1">
-                                <label className="text-xs font-semibold text-slate-400 uppercase">Annual Cap</label>
+                                <label className="text-xs font-semibold text-slate-400 uppercase flex items-center">
+                                    Annual Cap
+                                    <InfoTooltip content="The maximum discount value you can receive. Once your savings hit this limit, you pay full price." />
+                                </label>
                                 <div className="flex items-center gap-1 mt-1">
                                     <span className="text-slate-400">RM</span>
                                     <input
@@ -239,7 +243,10 @@ export function PlanManager() {
                                     </div>
                                 </div>
                                 <div className="col-span-1">
-                                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1.5 block">Annual Cap</label>
+                                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1.5 flex items-center">
+                                        Annual Cap
+                                        <InfoTooltip content="The maximum discount value you can receive. Once your savings hit this limit, you pay full price." />
+                                    </label>
                                     <div className="relative">
                                         <span className="absolute left-3 top-2.5 text-slate-400 font-medium z-10">RM</span>
                                         <input

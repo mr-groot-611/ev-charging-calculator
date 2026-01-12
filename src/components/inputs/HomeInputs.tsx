@@ -1,4 +1,5 @@
 import { useCalculator } from '../../store/CalculatorContext';
+import { InfoTooltip } from '../ui/InfoTooltip';
 
 export function HomeInputs() {
     const { home, setHome } = useCalculator();
@@ -16,8 +17,9 @@ export function HomeInputs() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Rate */}
                 <div className="space-y-2">
-                    <label className="text-sm font-medium text-slate-600 block">
+                    <label className="text-sm font-medium text-slate-600 flex items-center">
                         Home Electricity Rate (RM/kWh)
+                        <InfoTooltip content="Your electricity tariff. Common TNB rates: RM0.57 (Top Tier), RM0.218 (Off-Peak)." />
                     </label>
                     <div className="relative">
                         <span className="absolute left-3 top-2.5 text-slate-400 font-medium">RM</span>
