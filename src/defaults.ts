@@ -29,7 +29,7 @@ export const DEFAULT_PLANS: SubscriptionPlan[] = [
         feeAmount: 899,
         discountPct: 50,
         discountCap: 2400,
-        isEnabled: false,
+        isEnabled: true,
     },
     {
         id: 'jomcharge-monthly',
@@ -39,7 +39,7 @@ export const DEFAULT_PLANS: SubscriptionPlan[] = [
         feeAmount: 9.90,
         discountPct: 10,
         discountCap: 0,
-        isEnabled: false,
+        isEnabled: true,
     }
 ];
 

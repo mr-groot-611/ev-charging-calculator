@@ -1,5 +1,5 @@
 import { useCalculator } from '../../store/CalculatorContext';
-import { Zap, Share2 } from 'lucide-react';
+import { Zap } from 'lucide-react';
 
 export function PublicModeSwitch() {
     const { publicMode, setPublicMode } = useCalculator();
@@ -13,8 +13,8 @@ export function PublicModeSwitch() {
                 <button
                     onClick={() => setPublicMode({ mode: 'single', mix: publicMode.mix })}
                     className={`relative flex items-start gap-4 p-4 rounded-xl border-2 text-left transition-all ${publicMode.mode === 'single'
-                            ? 'border-blue-500 bg-blue-50 ring-1 ring-blue-500'
-                            : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50'
+                        ? 'border-blue-500 bg-blue-50 ring-1 ring-blue-500'
+                        : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50'
                         }`}
                 >
                     <div className={`p-2 rounded-lg shrink-0 ${publicMode.mode === 'single' ? 'bg-blue-500 text-white' : 'bg-slate-100 text-slate-500'}`}>
@@ -30,8 +30,8 @@ export function PublicModeSwitch() {
                     </div>
                 </button>
 
-                {/* Mode: Mix */}
-                <button
+                {/* Mode: Mix (Hidden per user request) */}
+                {/* <button
                     onClick={() => setPublicMode({ mode: 'mix', mix: publicMode.mix })}
                     className={`relative flex items-start gap-4 p-4 rounded-xl border-2 text-left transition-all ${publicMode.mode === 'mix'
                             ? 'border-indigo-500 bg-indigo-50 ring-1 ring-indigo-500'
@@ -49,7 +49,7 @@ export function PublicModeSwitch() {
                             I use a mix of different networks. Calculate weighted cost based on my usage habits.
                         </div>
                     </div>
-                </button>
+                </button> */}
             </div>
 
             {publicMode.mode === 'mix' && (

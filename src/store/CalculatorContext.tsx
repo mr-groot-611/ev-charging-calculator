@@ -41,7 +41,7 @@ const STORAGE_KEY = 'ev-calculator-state-v1';
 export function CalculatorProvider({ children }: { children: ReactNode }) {
     const [driving, setDriving] = useState<DrivingStats>(DEFAULT_DRIVING);
     const [home, setHome] = useState<HomeCharging>(DEFAULT_HOME);
-    const [split, setSplit] = useState<ChargingSplit>({ homePct: 70 });
+    const [split, setSplit] = useState<ChargingSplit>({ homePct: 0 });
     const [publicMode, setPublicMode] = useState<PublicChargingMode>(DEFAULT_MODE);
     const [cpos, setCpos] = useState<CPO[]>(DEFAULT_CPOS);
     const [plans, setPlans] = useState<SubscriptionPlan[]>(DEFAULT_PLANS);
